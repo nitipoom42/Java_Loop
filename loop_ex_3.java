@@ -16,31 +16,21 @@ public class loop_ex_3 {
         System.out.print("จำนวนสินค้า : ");
         int Unit_Product = input.nextInt();
         Float Total_Product = Price_Product * Unit_Product;
-        Float Discount5 = 0.05f;
-        Float Discount15 = 0.15f;
-        Float Discount20 = 0.20f;
+        Float Discount = 0.0f;
+
         if (Unit_Product >= 1 && Unit_Product <= 100) {
-            System.out.println("--------------");
-            System.out.println("ราคารวม : " + Total_Product);
-            System.out.println("ได้รับส่วนลด : " + Total_Product * Discount5);
-            System.out.println("--------------");
-            System.out.println("ราคาสุธิ : " + (Total_Product - (Total_Product * Discount5)));
+            Discount = 0.05f;
         } else if (Unit_Product >= 501 && Unit_Product <= 1000) {
-            System.out.println("--------------");
-            System.out.println("ราคารวม : " + Total_Product);
-            System.out.println("ได้รับส่วนลด : " + Total_Product * Discount15);
-            System.out.println("--------------");
-            System.out.println("ราคาสุธิ " + (Total_Product - (Total_Product * Discount15)));
+            Discount = 0.15f;
         } else if (Unit_Product >= 1001) {
-            System.out.println("--------------");
-            System.out.println("ราคารวม : " + Total_Product);
-            System.out.println("ได้รับส่วนลด : " + Total_Product * Discount20);
-            System.out.println("--------------");
-            System.out.println("ราคาสุธิ : " + (Total_Product - (Total_Product * Discount20)));
+            Discount = 0.20f;
         } else {
-            System.out.println("--------------");
-            System.out.println("ไม่ได้รับส่วนลด");
-            System.out.println("ราคาสุธิ : " + Total_Product);
+            Discount = 0f;
         }
+        System.out.println("--------------");
+        System.out.println("ราคารวม : " + Total_Product);
+        System.out.println("ได้รับส่วนลด : " + Total_Product * Discount);
+        System.out.println("--------------");
+        System.out.println("ราคาสุธิ : " + (Total_Product - (Total_Product * Discount)));
     }
 }

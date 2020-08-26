@@ -1,4 +1,4 @@
-import java.time.Year;
+import java.util.Scanner;
 
 //เงินฝาก 50,000 บาท ดอกเบี้ยปีละ 4% รับดอกเบี้ยทุกสิ้นปีโดยไม่ถอนออกสิ้นปีที่ 10 จะมีเงินรวมเท่ามใด
 public class loop_ex_5 {
